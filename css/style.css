@@ -1,0 +1,1083 @@
+@font-face{
+  font-family: 'Gotham Pro';
+  src: url(../fonts/GothamPro.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url(../fonts/GothamPro-Bold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url(../fonts/GothamPro-Italic.woff) format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url(../fonts/GothamPro-Light.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url(../fonts/GothamPro-Medium.woff) format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rounded Mplus 1c';
+  src: url(../fonts/RoundedMplus1c-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rounded Mplus 1c';
+  src: url(../fonts/RoundedMplus1c-Medium.woff) format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Rounded Mplus 1c';
+  src: url(../fonts/RoundedMplus1c-Light.woff) format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Rounded Mplus 1c';
+  src: url(../fonts/RoundedMplus1c-Bold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Gotham Pro', 'Rounded Mplus 1c', 'Arial', sans-serif;
+  background-color: #F5F6FB;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+}
+.content-wrapper {
+  width: 1440px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+.avatars-alarm {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 63px;
+  height: auto;
+  background-color: #F5F6FB;
+  box-sizing: border-box;
+  padding-top: 28px;
+}
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 188px;
+  height: auto;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding-top: 28px;
+  font-family: 'Gotham Pro';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  border-right: 1px solid #ECEFF2;
+  border-left: 1px solid #ECEFF2;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 1187px;
+  height: auto;
+  background-color: #F5F6FB;
+  box-sizing: border-box;
+  padding-right: 38px;
+  padding-left: 40px;
+  padding-top: 28px;
+}
+.avatars-wrapper {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  border: 2px solid #2931FF;
+  border-radius: 50%;
+  background-color: #ECEFF2;
+  align-content: center;
+  margin-bottom: 20px;
+}
+.avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 50%;
+}
+.name {
+  background-color: #949CBA;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+.name-words {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Rounded Mplus 1c';
+  font-weight: bold;
+  font-style: normal;
+  font-size: 14px;
+}
+.plus {
+  background-color: #F5F6FB;
+  border: none;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 532px;
+}
+.bell-button {
+  width: 20px;
+  height: 20px;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  background-color: transparent;
+  align-content: center;
+  margin-bottom: 20px;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+.bell-button:after {
+  content: '';
+  display: flex;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  background-color: #DA5F4B;
+  border-radius: 50%;
+  top: 0px;
+  right: 0px;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: inherit;
+  padding-left: 27px;
+  color: #949CBA;
+}
+.menu-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+
+}
+.icon-cast {
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+.menu-link {
+  color: #949CBA;
+}
+.active {
+  color: #1C303E;
+}
+.upper-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 1110px;
+  margin-bottom: 30px;
+}
+.circle-what {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px -5px;
+}
+.history {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  color: #1C303E;
+  margin-bottom: 40px;
+}
+.history-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.history-title {
+  font-size: 24px;
+  font-style: bold;
+  margin: 0px 12px 0px 0px;
+}
+.choose-rate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #84859E;
+  width: 148px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-style: normal;
+  box-sizing: border-box;
+  margin-left: 673px;
+}
+.underline {
+  width: 118px;
+  height: 5px;
+  background-color: #F1F4FB;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  width: 1110px;
+}
+.search-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.search-block:after {
+  content: '';
+  position: absolute;
+  width: 178px;
+  height: 1px;
+  background-color: #84859E;
+  top: 30px;
+  left: 25px;
+  opacity: 0.3;
+
+}
+.search-field {
+  margin-right: 0px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 182px;
+  font-size: 18px;
+}
+
+.show {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 118px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-style: normal;
+  color: #84859E;
+  font-style: normal;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.calendar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 170px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-style: normal;
+  color: #84859E;
+  font-style: normal;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.today {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 110px;
+  height: 30px;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-style: normal;
+  color: #84859E;
+  font-style: normal;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.items-icons {
+  margin-left: 10px;
+}
+.items-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #84859E;
+  height: 30px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-style: normal;
+  box-sizing: border-box;
+  margin-left: 470px;
+}
+.user-blocks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1110px;
+}
+.user-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 350px;
+  height: 316px;
+  background-color: #fff;
+  margin-bottom: 32px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 30px 24px 24px 24px;
+}
+.create-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 68px;
+  height: 68px;
+  background-color: #2931FF;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 27px;
+}
+.create-comparison:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  top: 34px;
+  left: 24px;
+  border-radius: 6px;
+}
+.create-comparison:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  top: 34px;
+  left: 24px;
+  border-radius: 6px;
+  transform: rotate(90deg);
+}
+.text-comparison {
+  font-size: 14px;
+  color: #84859E;
+}
+.user-title {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+.upper-user-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.like-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: auto;
+  padding: 0px;
+  margin-right: 16px;
+}
+.statistic-user-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 34px;
+}
+.stat-stick {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 8px;
+  background-color: #DAD7FE;
+  width: 100%;
+  border-radius: 6px;
+  position: relative;
+  margin-top: 8px;
+}
+.stat-stick:after {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 8px;
+  background-color: #4339F2;
+  border-radius: 6px;
+}
+.stat-text {
+  padding: 0px;
+  margin: 0px;
+}
+.bloger-text {
+  padding: 0px;
+  margin: 0px;
+}
+.set-of-users {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.users-mini-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.mini-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: 100%;
+  background-position: center;
+  background-size: cover;
+  margin-left: 8px;
+}
+.one {
+  background-image: url(../img/manglass.png);
+  background-repeat: no-repeat;
+}
+.two {
+  background-image: url(../img/tshirtman.png);
+  background-repeat: no-repeat;
+}
+.free {
+  background-image: url(../img/woman.png);
+  background-repeat: no-repeat;
+}
+.four {
+  background-image: url(../img/pikachu.png);
+  background-repeat: no-repeat;
+}
+
+/*Popups styles*/
+/*Enter popup. Для появления попапа - менять свойство display с none на flex у класса enter-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса enter-popup.*/
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+h2 {
+  margin: 0px;
+  padding: 0px;
+}
+.enter-title {
+  margin-bottom: 32px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+.enter-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 600px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 44px 40px 44px 40px;
+}
+.popup-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.popup-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.popup-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+.title-field {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #84859E;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+.enter-field {
+  background-color: #F1F4FB;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 24px;
+  width: 100%;
+  height: 40px;
+}
+.password-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 16px;
+  height: 10px;
+  position: absolute;
+  left: 94%;
+  top: 50%;
+  cursor: pointer;
+  background-image: url(../img/eye.svg);
+  background-repeat: no-repeat;
+}
+.popup-item-functions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.popup-field-functions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+}
+.remember-checkbox {
+  background-color: #F1F4FB;
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+}
+.remember-question {
+  color: #2931FF;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.enter-profile-button {
+  width: 288px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.registration {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text {
+  margin-right: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+}
+.registration-link {
+  color: #2931FF;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.weight-field {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: 400;
+}
+
+/*Create account popup. Для появления попапа - менять свойство display с none на flex у класса reg-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса reg-popup.*/
+.reg-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 600px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 44px 40px 44px 40px;
+}
+.enter-title-reg {
+  margin-bottom: 32px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+.popup-options-reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.popup-item-reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.popup-field-reg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+.title-field-reg {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #84859E;
+  margin-bottom: 12px;
+  margin-right: 12px;
+}
+.enter-field-reg {
+  background-color: #F1F4FB;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 24px;
+  width: 100%;
+  height: 40px;
+}
+.password-button-reg {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 16px;
+  height: 10px;
+  position: absolute;
+  left: 94%;
+  top: 50%;
+  cursor: pointer;
+  background-image: url(../img/eye.svg);
+  background-repeat: no-repeat;
+}
+.popup-item-functions-reg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.popup-field-functions-reg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+}
+.remember-checkbox-reg {
+  background-color: #F1F4FB;
+  border-radius: 6px;
+  width: 20px;
+  height: 20px;
+}
+.enter-profile-button-reg {
+  width: 288px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap-reg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.registration-reg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-reg {
+  margin-right: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+}
+.registration-link-reg {
+  color: #2931FF;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.weight-field-reg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: 400;
+}
+.reg-link {
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #84859E;
+  text-decoration: underline;
+}
+
+/*Activate popup. Для появления попапа - менять свойство display с none на flex у класса activate-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса activate-popup.*/
+.activate-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 436px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+.enter-title-activate {
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-activate::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/okpopup.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 64px;
+}
+.enter-profile-button-activate {
+  width: 288px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap-activate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.registration-activate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-activate {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/*Pu-pu-pi popup. Для появления попапа - менять свойство display с none на flex у класса pupupi-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса pupupi-popup.*/
+.pupupi-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 436px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+
+.enter-title-pupupi {
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-pupupi::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/okpopup.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 64px;
+}
+.enter-profile-button-pupupi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 288px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap-pupupi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.registration-pupupi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-pupupi {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
