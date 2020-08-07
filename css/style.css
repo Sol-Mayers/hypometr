@@ -281,7 +281,7 @@ a {
 }
 .history-title {
   font-size: 24px;
-  font-style: bold;
+  font-style: normal;
   margin: 0px 12px 0px 0px;
 }
 .choose-rate {
@@ -642,6 +642,7 @@ h2 {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  position: relative;
 }
 .popup-field {
   display: flex;
@@ -650,7 +651,6 @@ h2 {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  position: relative;
 }
 .title-field {
   font-style: normal;
@@ -803,6 +803,7 @@ h2 {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  position: relative;
 }
 .popup-field-reg {
   display: flex;
@@ -811,7 +812,6 @@ h2 {
   align-items: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  position: relative;
 }
 .title-field-reg {
   font-style: normal;
