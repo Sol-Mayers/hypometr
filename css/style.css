@@ -161,10 +161,17 @@ a {
   height: 40px;
   margin-bottom: 532px;
 }
+.plus-icon-menu {
+  stroke: #949CBA;
+  fill: transparent;
+}
+.plus-icon-menu:hover {
+  stroke: #2931FF;
+}
 .bell-button {
   width: 20px;
   height: 20px;
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   box-sizing: border-box;
@@ -246,7 +253,7 @@ a {
   justify-content: flex-end;
   align-content: center;
   flex-wrap: wrap;
-  width: 1110px;
+  width: 100%;
   margin-bottom: 30px;
 }
 .circle-what {
@@ -264,12 +271,13 @@ a {
 .history {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
   color: #1C303E;
   margin-bottom: 40px;
+  width: 100%;
 }
 .history-block {
   display: flex;
@@ -284,6 +292,7 @@ a {
   font-style: normal;
   margin: 0px 12px 0px 0px;
 }
+/*Для переключения поменять display на none*/
 .choose-rate {
   display: flex;
   flex-direction: row;
@@ -299,7 +308,6 @@ a {
   font-size: 14px;
   font-style: normal;
   box-sizing: border-box;
-  margin-left: 673px;
 }
 .underline {
   width: 118px;
@@ -311,11 +319,11 @@ a {
 .search {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-content: center;
   align-items: baseline;
   flex-wrap: wrap;
-  width: 1110px;
+  width: 100%;
 }
 .search-block {
   display: flex;
@@ -324,28 +332,21 @@ a {
   align-content: center;
   align-items: center;
   flex-wrap: wrap;
-  position: relative;
-}
-.search-block:after {
-  content: '';
-  position: absolute;
-  width: 178px;
-  height: 1px;
-  background-color: #84859E;
-  top: 30px;
-  left: 25px;
-  opacity: 0.3;
-
 }
 .search-field {
   margin-right: 0px;
   background-color: transparent;
   border: none;
+  box-shadow: 0px 1px 0px 0px #84859E;
   outline: none;
-  width: 182px;
+  width: 190px;
   font-size: 18px;
+  box-sizing: border-box;
+  padding-bottom: 5px;
 }
-
+.search-field:focus {
+  box-shadow: 0px 2px 0px 0px #2931FF;
+}
 .show {
   display: flex;
   flex-direction: row;
@@ -386,6 +387,20 @@ a {
   outline: none;
   cursor: pointer;
   margin-left: 15px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.calendar-cast {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: none;
+  color: #84859E;
+  width: 100%;
+  outline: none;
 }
 .today {
   display: flex;
@@ -424,7 +439,7 @@ a {
   font-size: 14px;
   font-style: normal;
   box-sizing: border-box;
-  margin-left: 470px;
+  position: relative;
 }
 .user-blocks {
   display: flex;
@@ -432,11 +447,12 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 1110px;
+  margin-bottom: 6px;
 }
 .user-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -448,8 +464,9 @@ a {
   box-sizing: border-box;
   padding: 30px 24px 24px 24px;
 }
+/*Для повления - поменять display на flex*/
 .create-comparison {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
@@ -484,6 +501,31 @@ a {
   border-radius: 6px;
   transform: rotate(90deg);
 }
+/*Для удаления - поменять display на none*/
+.lock-closed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 68px;
+  height: 68px;
+  background-color: #dee1e3;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 27px;
+  background-image: url(../img/rightlock.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.lock-closed:hover {
+  background-image: url(../img/rightlockopen.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #2931FF;
+}
 .text-comparison {
   font-size: 14px;
   color: #84859E;
@@ -500,6 +542,7 @@ a {
   justify-content: flex-start;
   flex-wrap: wrap;
   margin-bottom: 28px;
+  width: 100%;
 }
 .like-button {
   background-color: transparent;
@@ -517,6 +560,7 @@ a {
   flex-wrap: wrap;
   width: 100%;
   margin-bottom: 34px;
+  font-size: 14px;
 }
 .stat-stick {
   display: flex;
@@ -546,12 +590,19 @@ a {
   padding: 0px;
   margin: 0px;
 }
+.main-text {
+  box-sizing: border-box;
+  padding-bottom: 12px;
+}
 .set-of-users {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  width: 100%;
+  font-size: 14px;
+  color: #84859E;
 }
 .users-mini-icon {
   display: flex;
@@ -571,6 +622,7 @@ a {
   background-position: center;
   background-size: cover;
   margin-left: 8px;
+  position: relative;
 }
 .one {
   background-image: url(../img/manglass.png);
@@ -588,9 +640,316 @@ a {
   background-image: url(../img/pikachu.png);
   background-repeat: no-repeat;
 }
+.date-and-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  font-size: 14px;
+  color: #84859E;
+  margin-top: 25px;
+}
+.time-text {
+  padding: 0px;
+  margin: 0px;
+}
+.stat-of-users {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 34px;
+}
+.digits-of-users {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #949CBA;
+}
+.cast-digit {
+  font-size: 16px;
+  color: #000000;
+}
+.open-link-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+.open-user-stat {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2931FF;
+}
+.first-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.exactly-digit {
+  margin-bottom: 4px;
+}
+.pages-number {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+  font-size: 14px;
+  color: #9B9CAF;
+  width: 100%;
+
+}
+.hundred {
+  margin-left: 8px;
+  background-color: transparent;
+  border: none;
+  color: #9B9CAF;
+  cursor: pointer;
+  font-weight: 500;
+  outline: none;
+}
+.fifty {
+  margin-left: 8px;
+  background-color: transparent;
+  border: none;
+  color: #9B9CAF;
+  cursor: pointer;
+  font-weight: 500;
+  outline: none;
+}
+.thirty {
+  margin-left: 8px;
+  background-color: #fff;
+  border: none;
+  color: #9B9CAF;
+  cursor: pointer;
+  border-radius: 100px;
+  color: #2931FF;
+  font-weight: 500;
+  outline: none;
+}
+.amount-of-items {
+  margin-left: 40px;
+}
+.prev-page {
+  width: 12px;
+  height: 12px;
+}
+.next-page {
+  width: 12px;
+  height: 12px;
+}
+.arrows-check-pages {
+  width: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
+.how-many-digits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
+.number-of-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.digit-of-elements {
+  margin-left: 4px;
+}
+/*Бесплатный 3 дня. Для переключения поменять display на flex*/
+.choose-rate-free {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #84859E;
+  width: 160px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-style: normal;
+  box-sizing: border-box;
+}
+.counter-days {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.underline-free {
+  width: 128px;
+  height: 5px;
+  background-color: #4339F2;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+/*Доступно 50000000. Для переключения поменять display на flex*/
+.choose-rate-available {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #84859E;
+  width: 223px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-style: normal;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+.wave-icon {
+  position: absolute;
+  top: 4px;
+  z-index: -1;
+}
+.counter-days-available {
+  margin-left: 4px;
+  margin-right: 4px;
+  color: #4339F2;
+  font-weight: 500;
+}
+.ellipse-icon-up {
+  margin-right: 4px;
+}
+/*Выдвижное меню предварительного просмотра. Для отображения переключить display на flex.*/
+.menu-today {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 260px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  top: 44px;
+  left: 156px;
+  z-index: 1;
+  font-weight: 500;
+}
+.main-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.main-list-item:hover {
+  background-color: #F5F6FB;
+}
+.menu-link-item:hover {
+  color: #4339F2;
+}
+.today-item {
+  height: 32px;
+}
+.bold-item {
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+}
+.menu-link-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #84859E;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 40px;
+}
+.today-list {
+  width: 100%;
+}
+
+.mini-icon::before,
+.mini-icon::after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.mini-icon::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 125%;
+  left: -100%;
+  z-index: 1;
+  background: rgba(255,255,230,0.9);
+  font-size: 11px;
+  padding: 5px 10px;
+  min-width: 104px;
+  height: 36px;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.mini-icon::after {
+  content: "";
+  position: absolute;
+  top: 112%;
+  left: 40%;
+  z-index: 1;
+  width: 0px;
+  height: 0px;
+  border-bottom: 5px solid rgba(51, 51, 51, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.mini-icon:hover::before,
+.mini-icon:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 /*Popups styles*/
-/*Enter popup. Для появления попапа - менять свойство display с none на flex у класса enter-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса enter-popup.*/
+/*Вход - enter popup. Для появления попапа - менять свойство display с none на flex у класса enter-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса enter-popup.*/
 ul {
   list-style: none;
   margin: 0px;
@@ -627,6 +986,51 @@ h2 {
   transform: translate(-50%,-50%);
   padding: 44px 40px 44px 40px;
 }
+.custom-checkbox>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox>span {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  user-select: none;
+}
+.custom-checkbox>span::before {
+  content: '';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80% 80%;
+  margin-left: 12px;
+}
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+  border-color: #2931FF;
+}
+.custom-checkbox>input:not(:disabled):active+span::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+.custom-checkbox>input:checked+span::before {
+  border-color: #2931FF;
+  background-color: #2931FF;
+  background-image: url(../img/checkicon.svg);
+}
+.custom-checkbox>input:disabled+span::before {
+  background-color: #e9ecef;
+}
 .popup-options {
   display: flex;
   flex-direction: column;
@@ -658,7 +1062,6 @@ h2 {
   font-size: 14px;
   color: #84859E;
   margin-bottom: 12px;
-  margin-right: 12px;
 }
 .enter-field {
   background-color: #F1F4FB;
@@ -686,7 +1089,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -760,7 +1163,7 @@ h2 {
   font-weight: 400;
 }
 
-/*Create account popup. Для появления попапа - менять свойство display с none на flex у класса reg-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса reg-popup.*/
+/*Создание аккаунта - reg popup. Для появления попапа - менять свойство display с none на flex у класса reg-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса reg-popup.*/
 .reg-popup {
   display: none;
   flex-direction: column;
@@ -780,6 +1183,52 @@ h2 {
   top: 50%;
   transform: translate(-50%,-50%);
   padding: 44px 40px 44px 40px;
+}
+
+.custom-checkbox-reg>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox-reg>span {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  user-select: none;
+}
+.custom-checkbox-reg>span::before {
+  content: '';
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 80% 80%;
+  margin-left: 12px;
+}
+.custom-checkbox-reg>input:not(:disabled):not(:checked)+span:hover::before {
+  border-color: #2931FF;
+}
+.custom-checkbox-reg>input:not(:disabled):active+span::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+.custom-checkbox-reg>input:checked+span::before {
+  border-color: #2931FF;
+  background-color: #2931FF;
+  background-image: url(../img/checkicon.svg);
+}
+.custom-checkbox-reg>input:disabled+span::before {
+  background-color: #e9ecef;
 }
 .enter-title-reg {
   margin-bottom: 32px;
@@ -921,7 +1370,7 @@ h2 {
   text-decoration: underline;
 }
 
-/*Activate popup. Для появления попапа - менять свойство display с none на flex у класса activate-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса activate-popup.*/
+/*Активируйте аккаунт - activate popup. Для появления попапа - менять свойство display с none на flex у класса activate-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса activate-popup.*/
 .activate-popup {
   display: none;
   flex-direction: column;
@@ -943,7 +1392,7 @@ h2 {
   padding: 87px 44px 36px 44px;
 }
 .enter-title-activate {
-  margin-bottom: 12px;
+  margin-bottom: 0px;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -996,9 +1445,10 @@ h2 {
   color: #84859E;
   text-align: center;
   margin-bottom: 32px;
+  line-height: 20px;
 }
 
-/*Pu-pu-pi popup. Для появления попапа - менять свойство display с none на flex у класса pupupi-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса pupupi-popup.*/
+/*Пу-пу-пи - Pupupi popup. Для появления попапа - менять свойство display с none на flex у класса pupupi-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса pupupi-popup.*/
 .pupupi-popup {
   display: none;
   flex-direction: column;
@@ -1021,7 +1471,7 @@ h2 {
 }
 
 .enter-title-pupupi {
-  margin-bottom: 12px;
+  margin-bottom: 0px;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -1032,7 +1482,7 @@ h2 {
   content: "";
   width: 220px;
   height: 130px;
-  background-image: url(../img/okpopup.png);
+  background-image: url(../img/pupupi.svg);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -1079,5 +1529,1948 @@ h2 {
   color: #84859E;
   text-align: center;
   margin-bottom: 32px;
+  line-height: 20px;
 }
 
+/*Восстановление пароля - recovery popup. Для появления попапа - менять свойство display с none на flex у класса recovery-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса recovery-popup.*/
+
+.recovery-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 460px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+
+.enter-title-recovery {
+  padding: 0px;
+  margin: 0px 0px 12px 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-recovery::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/recovery.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 76px;
+}
+.button-wrap-recovery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.enter-profile-button-recovery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 180px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.cancel-profile-button-recovery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 180px;
+  height: 55px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(15, 41, 246, 0.1);
+  outline: none;
+  background-color: #fff;
+  color: #2931FF;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+.registration-recovery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-recovery {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  padding: 0px;
+  margin-bottom: 0px 0px 32px 0px;
+  width: 310px;
+  line-height: 20px;
+}
+.popup-field-recovery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.title-field-recovery {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #84859E;
+  margin-bottom: 12px;
+}
+.enter-field-recovery {
+  background-color: #F1F4FB;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 40px;
+  padding: 0px;
+}
+
+/*Восстановление пароля - proof popup. Для появления попапа - менять свойство display с none на flex у класса proof-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса proof-popup.*/
+.proof-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 460px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+
+.enter-title-proof {
+  margin: 0px 0px 28px 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+  padding: 0px;
+}
+.enter-title-proof::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/recovery4.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 64px;
+}
+.button-wrap-proof {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.enter-profile-button-proof {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 180px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.cancel-profile-button-proof {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 180px;
+  height: 55px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(15, 41, 246, 0.1);
+  outline: none;
+  background-color: #fff;
+  color: #2931FF;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+.popup-field-proof {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.title-field-proof {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #84859E;
+  margin-bottom: 12px;
+}
+.enter-field-proof {
+  background-color: #F1F4FB;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 40px;
+  padding: 0px;
+}
+
+/*Восстановление пароля - recovery min one popup. Для появления попапа - менять свойство display с none на flex у класса recovery-min-one-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса recovery-min-one-popup.*/
+.recovery-min-one-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 436px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+
+.enter-title-recovery-min-one {
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-recovery-min-one::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/recovery3.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 64px;
+}
+.enter-profile-button-recovery-min-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 288px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap-recovery-min-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.registration-recovery-min-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-recovery-min-one {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 20px;
+}
+
+/*Восстановление пароля - recovery min two popup. Для появления попапа - менять свойство display с none на flex у класса recovery-min-two-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса recovery-min-two-popup.*/
+.recovery-min-two-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 436px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+
+.enter-title-recovery-min-two {
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-recovery-min-two::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/recovery2.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 64px;
+}
+.enter-profile-button-recovery-min-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 288px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap-recovery-min-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.registration-recovery-min-two {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-recovery-min-two {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 20px;
+}
+
+/*Привет от Хайпометр - hello popup. Для появления попапа - менять свойство display с none на flex у класса hello-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса hello-popup.*/
+.hello-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 436px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+
+.enter-title-hello {
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-hello::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/success.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 64px;
+}
+.enter-profile-button-hello {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 288px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap-hello {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.registration-hello {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-hello {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 20px;
+}
+
+/*Add popup. Для появления попапа - менять свойство display с none на flex у класса add-popup. Для того, что-бы убрать рамку у попапа - удалить свойство box-shadow у класса add-popup.*/
+.add-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 730px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 44px 0px 24px 0px;
+}
+.enter-title-add {
+  margin-bottom: 12px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 44px;
+  padding-right: 44px;
+}
+.popup-options-add {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-left: 44px;
+  padding-right: 44px;
+  padding-top: 44px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.popup-item-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 300px;
+  position: relative;
+}
+.popup-field-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.enter-field-add {
+  background-color: #F1F4FB;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 24px;
+  width: 100%;
+  height: 40px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #1C303E;
+  text-align: start;
+}
+.arrow-icon {
+  position: relative;
+  cursor: pointer;
+}
+.arrow-icon::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url(../img/arrow.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 280px;
+  top: 15px;
+}
+
+.circle-icon {
+  position: relative;
+  background-image: url(../img/searchnew.svg);
+  background-repeat: no-repeat;
+  background-position: 8px;
+}
+/*Иконки для различных состояний блока - ссылка на страницу или логин. Данные классы с помощью js меняются с circle-icon*/
+/*Восклицательный знак*/
+.attention {
+  background-image: url(../img/attention.svg);
+  background-repeat: no-repeat;
+  background-position: 281px;
+  background-size: 6px;
+}
+/*Крестик*/
+.exit {
+  background-image: url(../img/exit.svg);
+  background-repeat: no-repeat;
+  background-position: 272px;
+  background-size: 24px;
+}
+
+
+.circle-icon:focus {
+  background-image: none;
+}
+.search-icon-cast {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 1;
+  left: 5px;
+}
+
+.cssload-container {
+  width: 100%;
+  height: 49px;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  top: 34px;
+  left: 134px;
+}
+
+/*Анимация для загрузочного диска*/
+.cssload-double-torus {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  border: 2px solid;
+  border-radius: 50%;
+  border-color: #DBDEE8 #84859E #84859E;
+  animation: cssload-spin 1140ms infinite linear;
+    -o-animation: cssload-spin 1140ms infinite linear;
+    -ms-animation: cssload-spin 1140ms infinite linear;
+    -webkit-animation: cssload-spin 1140ms infinite linear;
+    -moz-animation: cssload-spin 1140ms infinite linear;
+}
+
+@keyframes cssload-spin {
+  100%{ transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes cssload-spin {
+  100%{ -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes cssload-spin {
+  100%{ -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-webkit-keyframes cssload-spin {
+  100%{ -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes cssload-spin {
+  100%{ -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+/*Класс arrow icon open присваевается списку по клику для того чтобы стрелочка перевернулась наверх.*/
+.arrow-icon-open {
+  position: relative;
+  cursor: pointer;
+}
+.arrow-icon-open::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url(../img/arrowup.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 280px;
+  top: 15px;
+}
+.enter-profile-button-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 75px;
+  height: 34px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+.back {
+  width: 71px;
+  height: 30px;
+  background-color: #fff;
+  border: 2px solid #2931FF;
+  color: #2931FF;
+  margin-right: 16px;
+}
+.button-wrap-add {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.registration-text-add-upper {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  padding-left: 44px;
+  padding-right: 44px;
+  margin-bottom: 34px;
+}
+.title-field-add {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #84859E;
+  margin-bottom: 10px;
+}
+.add-steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 44px;
+  padding-right: 44px;
+  padding-bottom: 32px;
+  color: #84859E;
+  font-size: 14px;
+  font-weight: 500;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.description-steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.step-item {
+  margin: 0px;
+  padding: 0px;
+}
+.visual-steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 2px;
+  background-color: #F1F4FB;
+  margin-bottom: 30px;
+  position: relative;
+}
+.step-point {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #F1F4FB;
+  border-radius: 50%;
+  top: -8px;
+}
+.first-point {
+  left: 0px;
+  box-shadow: 0px 0px 0px 3px #2931FF;
+  z-index: 1;
+  background-color: #2931FF;/*Что-бы кружочек стал белым, можно менять цвет с помощью JS на #fff*/
+}
+.second-point {
+  left: 312px;
+  z-index: 1;
+  background-color: #F1F4FB;/*Что-бы кружочек стал синим, можно менть цвет с помощью JS на #2931FF*/
+}
+.third-point {
+  left: 624px;
+  z-index: 1;
+  background-color: #F1F4FB;/*Что-бы кружочек стал синим, можно менть цвет с помощью JS на #2931FF*/
+}
+.two-item {
+  margin-right: 70px;
+}
+.one-item {
+  margin-right: 70px;
+  color: #2931FF;
+}
+.three-item {
+  margin-right: 70px;
+}
+.blue-stick {
+  position: absolute;
+  width: 25%; /*Данное свойство можно менять через JS для того, что-бы увеличивать и уменьшать синюю полоску*/
+  height: inherit;
+  background-color: #2931FF;
+  z-index: 0;
+}
+
+/*Попытка добавления закрытого аккаунта. Для включения нужно переключить display с none на flex*/
+.closed-account {
+  display: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 642px;
+  font-size: 12px;
+  color: #4F525F;
+  background-color: #FFF4C0;
+  margin: auto;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+.attention-text {
+  margin-left: 16px;
+}
+/*Аккаунт не найден. Для включения нужно переключить display с none на flex*/
+.unfind-account {
+  display: none;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: 642px;
+  font-size: 12px;
+  color: #4F525F;
+  background-color: #FFF4C0;
+  margin: auto;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 24px;
+}
+.unfind-text {
+  margin-left: 16px;
+}
+
+/*Ошибка сравнения - comparison popup. Включение display - flex.*/
+.comparison-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 445px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+.enter-title-comparison {
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-comparison::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/bad.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 64px;
+}
+.enter-profile-button-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.registration-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-comparison {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 20px;
+}
+
+/*Удалить сравнение - recovery popup delete comparison. Включение display - flex.*/
+.recovery-popup-delete-comparison {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 460px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+
+.enter-title-recovery-delete-comparison {
+  padding: 0px;
+  margin: 0px 0px 12px 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-recovery-delete-comparison::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/bang.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 76px;
+}
+.button-wrap-recovery-delete-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.enter-profile-button-recovery-delete-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 180px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.cancel-profile-button-recovery-delete-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 180px;
+  height: 55px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(15, 41, 246, 0.1);
+  outline: none;
+  background-color: #fff;
+  color: #2931FF;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+.registration-recovery-delete-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+.registration-text-recovery-delete-comparison {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  padding: 0px;
+  margin-bottom: 0px 0px 32px 0px;
+  width: 100%;
+  line-height: 20px;
+}
+.popup-field-recovery-delete-comparison {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.title-field-recovery-delete-comparison {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #84859E;
+  margin-bottom: 12px;
+}
+.enter-field-recovery-delete-comparison {
+  background-color: #F1F4FB;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 40px;
+  width: 100%;
+  height: 40px;
+  padding: 0px;
+}
+
+
+/*Страница со сравнениями*/
+.main-content-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 1187px;
+  height: auto;
+  background-color: #F5F6FB;
+  box-sizing: border-box;
+  padding-right: 38px;
+  padding-left: 40px;
+  padding-top: 28px;
+}
+.upper-menu-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 41px;
+}
+.comparison-what {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.history-block-comparison {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.description-comparison-user {
+  font-size: 18px;
+  font-weight: 500;
+  color: #9B9CAF;
+}
+.user-blocks-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1110px;
+  margin-bottom: 6px;
+}
+.user-card-comparison {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 350px;
+  background-color: #fff;
+  margin-bottom: 32px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 16px 24px 24px 24px;
+  color: #1C303E;
+}
+.lock-closed-comparison {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50px;
+  height: 50px;
+  background-color: #F2F4FB;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+.blue-group {
+  background-image: url(../img/bluegroup.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.title-comparison {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.how-many-people {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.what-percent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-size: 36px;
+  font-weight: bold;
+}
+.orange-group {
+  background-image: url(../img/orangegroup.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.yellow-group {
+  background-image: url(../img/yellowgroup.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.sort-blogers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.sort-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: baseline;
+  width: 100%;
+  margin-bottom: 18px;
+  position: relative;
+}
+.title-sort {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  margin-right: 12px;
+}
+.button-sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  color: #2931FF;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+}
+.underline-sort::after {
+  content: "";
+  width: 162px;
+  height: 2px;
+  position: absolute;
+  background-color: #2931FF;
+  top: 100%;
+  left: 6px;
+}
+.upper-sort-menu {
+  position: relative;
+}
+.down-sort-menu {
+  position: relative;
+}
+
+/*Выдвижное меню сортировки*/
+.menu-today-sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 220px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  top: 34px;
+  left: 140px;
+  z-index: 1;
+  font-weight: 500;
+}
+.main-list-item-sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.main-list-item-sort:hover {
+  background-color: #F5F6FB;
+}
+.menu-link-item-sort:hover {
+  color: #4339F2;
+}
+.today-item-sort {
+  height: 32px;
+}
+.padding-sort {
+  box-sizing: border-box;
+  padding-left: 10px;
+  color: #84859E;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menu-link-item-sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #84859E;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.today-list-sort {
+  width: 100%;
+}
+
+/*Выдвижное меню - выберите тип*/
+.menu-today-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 220px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  top: 34px;
+  left: 140px;
+  z-index: 1;
+  font-weight: 500;
+}
+.main-list-item-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.main-list-item-type:hover {
+  background-color: #F5F6FB;
+}
+.menu-link-item-type:hover {
+  color: #4339F2;
+}
+.today-item-type {
+  height: 32px;
+}
+.padding-type {
+  box-sizing: border-box;
+  padding-left: 10px;
+  color: #84859E;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menu-link-item-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #84859E;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+}
+.today-list-type {
+  width: 100%;
+}
+
+
+/*Всплывающие окна при наведении на аватар на главной странице*/
+.mini-icon-sort:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 125%;
+  z-index: 1;
+  background: rgba(255,255,230,0.9);
+  font-size: 11px;
+  padding: 5px 10px;
+  min-width: 104px;
+  height: 36px;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.arrow-bloger {
+  stroke: #2931FF;
+  margin-left: 4px;
+}
+.table-blogers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 6px;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+.title-blogers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 64px;
+  padding-left: 28px;
+  padding-right: 28px;
+  padding-top: 14px;
+}
+.blogger-title-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  color: #9B9CAF;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff;
+  width: 140px;
+}
+.title-blogers-blue-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 28px;
+  padding-right: 28px;
+  min-height: 56px;
+}
+.blogger-title-table-blue-row,
+.wrap-icon-user{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #1C1D26;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  background-color: #FBFBFF;
+  align-content: center;
+  background-color: #fff;
+  width: 140px;
+  overflow: hidden;
+}
+
+.blue-row {
+  width: 100%;
+  background-color: #fff;
+  min-height: 56px;
+  border-top: 1px solid #ECEFF2;
+}
+
+.icon-user-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/tshirtman.png);
+  background-repeat: no-repeat;
+  margin-right: 15px;
+}
+.wrap-icon-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.name-of-blogger {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #1C1D26;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff;
+  align-content: center;
+}
+.second-foto {
+  background-image: url(../img/pikachu.png);
+}
+.color-blue {
+  background-color: #FBFBFF;
+}
+
+/*Вторая таблица*/
+.second-table-blogers {
+  background-color: #fff;
+  padding-bottom: 0px;
+}
+.hundred-percent {
+  background-color: #B9C1F2;
+}
+.fourty-percent {
+  background-color: rgba(185, 193, 242, 0.4);
+}
+.eighty-percent {
+  background-color: #C7CDF5;
+}
+.sixty-percent {
+  background-color: #D7DDF9;
+}
+.fifty-five-percent {
+  background-color: rgba(185, 193, 242, 0.55);
+}
+.second-width {
+  width: 220px;
+}
+.without-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.angle-circle {
+  border-radius: 0px 0px 6px 6px;
+}
+.angle-circle-item {
+  border-radius: 0px 0px 0px 6px;
+}
+.angle-circle-item-two {
+  border-radius: 0px 0px 6px 0px;
+}
+.make-item-padding {
+  box-sizing: border-box;
+  padding-left: 28px;
+}
+.make-center {
+  align-content: center;
+}
+.make-black {
+  color: #000000;
+}
+.wrap-to-improve {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.border-left-item {
+  border-left: 1px solid #fff;
+}
+.opened-button {
+  color: #000000;
+}
+.opened-arrow {
+  stroke: #000000;
+  transform: rotate(180deg);
+}
+
+
+/*Создание сравнения - proof popup bigcomp*/
+.proof-popup-bigcomp {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 732px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 4px 80px rgba(41, 49, 255, 0.2);
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 24px;
+}
+
+.enter-title-proof-bigcomp {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.enter-text-proof-bigcomp {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  color: #84859E;
+  font-size: 14px;
+  margin-bottom: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.button-wrap-proof-bigcomp {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.enter-profile-button-proof-bigcomp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 88px;
+  height: 35px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+  margin-left: 18px;
+}
+.cancel-profile-button-proof-bigcomp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 88px;
+  height: 35px;
+  border-radius: 6px;
+  border: 1.5px solid rgba(15, 41, 246, 0.1);
+  outline: none;
+  background-color: #fff;
+  color: #2931FF;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+.popup-field-proof-bigcomp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+.title-field-proof-bigcomp {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #84859E;
+  margin-bottom: 12px;
+}
+.enter-field-proof-bigcomp {
+  background-color: #F1F4FB;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.counter-field-proof-bigcomp {
+  position: absolute;
+  color: #9C9DB0;
+  font-size: 14px;
+  font-weight: 500;
+  left: 608px;
+  top: 40px;
+}
+.attention-comparison-block-bigcomp {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #FFF4C0;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.comparison-attention-wrap-bigcomp {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #4F525F;
+  font-size: 12px;
+  font-weight: 500;
+}
+.icon-comparison-attention-bigcomp {
+  margin-right: 15px;
+}
+.first-account-column-bigcomp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 320px;
+}
+.cost-account-column-bigcomp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 320px;
+}
+.accounts-cost-comparison-wrap-bigcomp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+/*Сравнение создано - comparison popup created success*/
+.comparison-popup-created-success {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 445px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+.enter-title-comparison-created-success {
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-comparison-created-success::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/create.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 64px;
+}
+.enter-profile-button-comparison-created-success {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap-comparison-created-success {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.registration-comparison-created-success {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-comparison-created-success {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 20px;
+}
+.dont-show {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  color: #2931FF;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+
+/*Ошибка сравнения - comparison popup error block*/
+.comparison-popup-error-block {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 445px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 44px 36px 44px;
+}
+.enter-title-comparison-error-block {
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-comparison-error-block::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/cardbig.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 52px;
+  left: 64px;
+}
+.enter-profile-button-comparison-error-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap-comparison-error-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.registration-comparison-error-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-comparison-error-block {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 20px;
+}
