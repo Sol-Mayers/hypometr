@@ -253,6 +253,18 @@ a {
   margin-bottom: 38px;
   font-weight: 500;
 }
+.menu-item-wrap-column-history {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.comp-margin-upper-main-menu {
+  margin-bottom: 0px;
+}
 .icon-cast {
   margin-right: 10px;
   vertical-align: bottom;
@@ -2633,7 +2645,7 @@ h2 {
   border: none;
   border-radius: 6px;
   outline: none;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   width: 300px;
   height: 34px;
   padding-left: 10px;
@@ -2647,8 +2659,6 @@ h2 {
   flex-wrap: wrap;
   width: 300px;
   box-sizing: border-box;
-  padding-left: 44px;
-  padding-right: 44px;
 }
 .flying-text-yes {
   position: relative;
@@ -2668,31 +2678,47 @@ h2 {
   align-items: center;
   color: #1C1D26;
   top: 33px;
-  left: 295px;
+  left: 250px;
 }
 .width-input-yes {
   background-color: #F1F4FB;
   border: none;
   border-radius: 6px;
   outline: none;
-  margin-bottom: 20px;
   width: 300px;
   height: 34px;
   padding-left: 10px;
   padding-right: 10px;
   box-sizing: border-box;
+  margin-bottom: 12px;
 }
 .yes-wrap {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  padding-left: 44px;
+  padding-right: 44px;
+}
+.yes-wrap-note {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
 }
-.margin-right-yes {
-  margin-right: 40px;
+.yes-wrap-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .find-comment-s {
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-content: center;
@@ -5543,34 +5569,13 @@ h2 {
 .space-pay-pbl {
   justify-content: space-between;
   position: relative;
-}
-.space-pay-pbl::after {
-  content: "";
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 680px;
-  height: 1px;
-  background-color: #E2E5EB;
-  position: absolute;
-  top: 46px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 .space-pay-second-pbl {
   justify-content: space-between;
   position: relative;
-}
-.space-pay-second-pbl::after {
-  content: "";
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 680px;
-  height: 1px;
-  background-color: #E2E5EB;
-  position: absolute;
-  top: 134px;
 }
 .observe-wrap-pay-pbl {
   display: flex;
@@ -5634,6 +5639,9 @@ h2 {
   margin-bottom: 17px;
   color: #2931FF;
 }
+.margin-top-aaa {
+  margin-top: 20px;
+}
 .activation-pay-title-pbl {
   margin-bottom: 12px;
   margin-left: 28px;
@@ -5650,11 +5658,12 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-bottom: 44px;
+  padding-bottom: 24px;
   color: #84859E;
   font-size: 14px;
   font-weight: 500;
   box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 .description-steps-pbl {
   display: flex;
@@ -5748,8 +5757,8 @@ h2 {
   border-radius: 10px;
 }
 .margin-pay-fourth-row-pbl {
-  margin-top: 10px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .big-economy-pbl {
   display: flex;
@@ -6470,4 +6479,100 @@ h2 {
   text-align: center;
   margin-bottom: 32px;
   line-height: 20px;
+}
+
+/*Успешная оплата*/
+.success-pay-popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 436px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 0px 0px 1px 1px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 87px 40px 36px 40px;
+}
+
+.enter-title-success-pay {
+  margin-bottom: 0px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+.enter-title-success-pay::before {
+  content: "";
+  width: 220px;
+  height: 130px;
+  background-image: url(../img/gun.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 48px;
+  left: 64px;
+}
+.enter-profile-button-success-pay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 288px;
+  height: 55px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #2931FF;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0px 0px 14px -6px #2931FF;
+}
+.button-wrap-success-pay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.registration-success-pay {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.registration-text-success-pay {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #84859E;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 20px;
+}
+.available-refferal-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  align-self: flex-end;
+  color: #84859E;
+  font-size: 12px;
+  margin-right: 50px;
+  margin-bottom: 14px;
 }
